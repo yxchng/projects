@@ -46,8 +46,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Mask Grounding for Referring Image Segmentation</h1>
-          <h2 class="title is-5 publication-title">CVPR 2024</h2>
+          <h1 class="title is-spaced is-1 publication-title">Mask Grounding for Referring Image Segmentation</h1>
+          <h2 class="subtitle is-5" style="color: #ff3860; margin-bottom: 12px; margin-top: -12px;">CVPR 2024</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yxchng.github.io/projects/mask-grounding">Yong Xien Chng</a><sup>1,2</sup>,</span>
@@ -115,7 +115,7 @@
       <img src="./static/images/teaser.png" alt="empty">
       <h2 class="subtitle has-text-centered">
         <br>
-        <b><span class="dnerf">Mask Grounding</span> is an innovative auxiliary task that can significantly improve the performance of existing Referring Image Segmentation algorithms by explicitly teaching these models to learn fine-grained visual grounding in their language features. Specifically, during training, these models are given randomly masked textual tokens and has to learn to predict their identities based on the surrounding textual, visual and segmentation information.</b>
+        <i><span style="color: orange">Mask Grounding</span> is an innovative auxiliary task that can significantly improve the performance of existing Referring Image Segmentation algorithms by explicitly teaching these models to learn fine-grained visual grounding in their language features. Specifically, during training, these models are given randomly masked textual tokens and has to learn to predict their identities based on the surrounding textual, visual and segmentation information.</i>
       </h2>
     </div>
   </div>
@@ -182,9 +182,8 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <img src="./static/images/method.png" alt="empty">
-          <br>
-          <br>
           <p>
+            <br>
             In this figure, we show the overview of Mask Grounding. To perform this task, we first use a MLP-based Mask Encoder to encode center-coordinates of segmentation masks. Then, we randomly mask textual tokens in language inputs before extracting their features. Finally, we pass the encoded language, image and mask features to a Transformer-based Masked Token Predictor to perform masked token prediction using cross-entropy loss. We use the large-scale BERT vocabulary as our word class list, which is generally accepted to have open-vocabulary capability.
           </p>
         </div>
@@ -201,9 +200,8 @@
         <h2 class="title is-3">Main Results</h2>
         <div class="content has-text-justified">
           <img src="./static/images/table1.png" alt="empty">
-          <br>
-          <br>
           <p>
+            <br>
             In this table, we compare our method with other leading RIS methods using the oIoU metric and show that it achieves multiple new state-of-the-art results. <i> Single dataset </i> refers to strictly following the predefined train/test splits of the original RefCOCO, RefCOCO+ and G-Ref datasets. <i> Multiple datasets </i> refers to combining the train splits from these 3 datasets with test images removed to prevent data leakage. <i> Extra datasets </i> refers to using additional data beyond RefCOCO, RefCOCO+ and G-Ref. † indicates models that use extra datasets. ‡ indicates that our model only uses multiple datasets. Bold indicates best.
           </p>
         </div>
@@ -220,9 +218,8 @@
         <h2 class="title is-3">Visualizations</h2>
         <div class="content has-text-justified">
           <img src="./static/images/visualizations.png" alt="empty">
-          <br>
-          <br>
           <p>
+            <br>
             In this figure, we show some visualizations of our network's predictions. Compared to one of the state-of-the-art method, LAVT, our method performs much better in various complex scenerios, suggesting its impressive capability to reason about various complex visual-object relationships.
           </p>
         </div>
